@@ -40,5 +40,7 @@ Working successfully
 - Сделать коммит через `npx cz`  коммит должен пройти
 - Попробовать `git commit -m "bad message"`  коммит должен быть заблокирован
 
+Для корректной работы Git hooks путь к хукам был явно указан командой `git config core.hooksPath .husky`
+
 
 All working correctly 
