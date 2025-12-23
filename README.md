@@ -1,44 +1,30 @@
-Цель: освоить базовый Git/GitHub workflow и стандартизировать коммиты через Conventional Commits.
+Отчёт: Git/GitHub 
 
+Что было сделно
+1. Создал публичный репозиторий и склонировал его локально.
+2. Работал через feature-ветку `feature/commit-setup` без прямых коммитов в main.
+3. Настроил commitlint, husky (commit-msg hook) и commitizen.
+4. Все коммиты создавались через `npx cz` в формате Conventional Commits.
+5. Открыл Pull Request и внёс правки новыми коммитами после комментариев.
+6. Смёржил Pull Request в main.
 
-Настроено:
-- Conventional Commits
-- commitlint
-- husky (commit-msg hook)
-- commitizen (коммиты через `npx cz`)
+Что настроено и где:
 
+commitlint
+- Файл: `commitlint.config.cjs`
+- Использован `@commitlint/config-conventional`
+- Ограничены типы коммитов: feat, fix, chore, refactor, docs
 
-Step 3 шаге с настройкой commitlint husky commitizen 
-Получил:
-npm WARN deprecated inflight@1.0.6
-npm WARN deprecated glob@7.2.3
-Пакет больше не поддерживается но ещё работает 
+husky
+- Инициализация через `npm run prepare`
+- Hook: `.husky/commit-msg`
+- Проверка сообщений коммитов через commitlint
 
-После добавления файла через `git add` commit-msg hook начал корректно отрабатывать и блокировать неверные сообщения коммитов.
-Пока это работает не правильно в процессе исправления 
-Исправленно в Husky команда `husky add` устарела 
-Commit-msg hook был создан вручную в директории `.husky`
-путь к hooks явно указан через `git config core.hooksPath .husky`
-Это позволило корректно подключить commitlint и блокировать некорректные сообщения коммитов
+commitizen
+- Коммиты создавались через `npx cz`
 
-Step 4 Branches and Commits 
-Working successfully 
-
-
-Что сделано
-- Настроены commitlint и husky commit-msg hook для проверки сообщений коммитов
-- Подключён commitizen все коммиты создаются через `npx cz`
-- Добавлены contributing guidelines
-
-
-Зачем это нужно
-- Единый формат сообщений коммитов делает работу с проектом удобной и читаемой историю
-- Husky и commitlint автоматически блокируют некорректные сообщения коммитов
-
-
-Проверка работоспособности
-- Сделать коммит через `npx cz`  коммит должен пройти
-- Попробовать `git commit -m "bad message"`  коммит должен быть заблокирован
-
-
-
+## Доказательства
+- Pull Request: <ССЫЛКА НА PR>
+- Пример истории:
+```bash
+git log --oneline
