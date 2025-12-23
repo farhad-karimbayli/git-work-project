@@ -1,0 +1,35 @@
+{
+  "name": "git-work-project",
+  "version": "1.0.0",
+  "description": "Цель: освоить базовый Git/GitHub workflow и стандартизировать коммиты через Conventional Commits.",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky",
+    "cz": "cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farhad-karimbayli/git-work-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farhad-karimbayli/git-work-project/issues"
+  },
+  "homepage": "https://github.com/farhad-karimbayli/git-work-project#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^20.2.0",
+    "@commitlint/config-conventional": "^20.2.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
